@@ -1,0 +1,12 @@
+{% extends 'master.html' %}
+
+{% block content %}
+<h2>Reader Comments</h2>
+<ul>
+    {% for comment in comments %}
+        <li><b>Post #{{ comment.post.id }}:</b> "{{ comment.content }}"</li>
+    {% endfor %}
+</ul>
+<br>
+<a href="{% url 'main' %}">← Return to Home</a>
+{% endblock %}

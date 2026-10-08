@@ -1,0 +1,12 @@
+{% extends 'master.html' %}
+
+{% block content %}
+<h2>Explore the Portal</h2>
+<p>Select a section below to discover content:</p>
+<ul>
+    <li><a href="{% url 'blogs' %}"> Articles & Posts</a></li>
+    <li><a href="{% url 'categories' %}"> Topics & Categories</a></li>
+    <li><a href="{% url 'comments' %}">Community Thoughts</a></li>
+    <li><a href="{% url 'users' %}"> Active Contributors</a></li>
+</ul>
+{% endblock %}

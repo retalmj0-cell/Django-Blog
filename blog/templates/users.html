@@ -1,0 +1,12 @@
+{% extends 'master.html' %}
+
+{% block content %}
+<h2>Our Authors & Community</h2>
+<ul>
+    {% for user in users %}
+        <li><b>{{ user.username }}</b> — <i>{{ user.email }}</i></li>
+    {% endfor %}
+</ul>
+<br>
+<a href="{% url 'main' %}">← Return to Home</a>
+{% endblock %}

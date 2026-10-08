@@ -1,0 +1,14 @@
+{% extends 'master.html' %}
+
+{% block content %}
+<h2>Featured Articles</h2>
+<ul>
+    {% for post in posts %}
+        <li>
+            <a href="{% url 'blogdetails' post_id=post.id %}">{{ post.title }}</a>
+        </li>
+    {% endfor %}
+</ul>
+<br>
+<a href="{% url 'main' %}">← Return to Home</a>
+{% endblock %}

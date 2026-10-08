@@ -1,0 +1,13 @@
+{% extends 'master.html' %}
+
+{% block content %}
+<article>
+    <h2>{{ post.title }}</h2>
+    <p><small><b>Topic:</b> {{ post.category.name }} | <b>Published:</b> {{ post.date_published }}</small></p>
+    <hr>
+    <p>{{ post.content }}</p>
+</article>
+<br>
+<a href="{% url 'blogs' %}">← Back to Articles</a> |
+<a href="{% url 'main' %}">Home</a>
+{% endblock %}
